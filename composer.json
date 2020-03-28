@@ -2,7 +2,7 @@
     "name": "elphis/string-helpers",
     "description": "Useful string helper functions for php.",
     "keywords": [
-        "php", "helpers", "string", "contains", "starts_with", "ends_with", "useful", "str", "elphis", "laravel", "fluent"
+        "helper", "php", "helpers", "string", "contains", "useful", "str", "fluent"
     ],
     "type": "library",
     "require-dev": {

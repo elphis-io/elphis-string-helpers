@@ -61,13 +61,13 @@ function str_ends_with(string $haystack, string $needle, bool $caseInsensitive =
  * limit the $string by $limit length and suffix it with the given $suffix
  *
  * @param string $string
- * @param integer $limit
+ * @param integer $length
  * @param string $suffix
  * @return string
  */
-function str_limit(string $string, int $limit, string $suffix = '...')
+function str_limit(string $string, int $length, string $suffix = '...')
 {
-    return substr($string, 0, $limit) . $suffix;
+    return substr($string, 0, $length) . $suffix;
 }
 
 /**
@@ -168,7 +168,7 @@ function str_studly_case(string $string)
 function str_kebab_case(string $string)
 {
     $string = str_strip_special_chars($string, ' ');
-    $string = preg_replace('/([a-z0-9])?([A-Z])/', '$1 $2', $string);
+    $string = preg_replace('/([a-z0-9])([A-Z])/', '$1 $2', $string);
     $string = preg_replace('/(\s)+/', '-', $string);
     return strtolower($string);
 }

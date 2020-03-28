@@ -91,14 +91,14 @@ class StringTest extends TestCase
     {
         $string1 = 'function-name+new_name.another%name#with$special(chars+CAPital1-2_3*5saudJQureshi';
         $result  = str_kebab_case($string1);
-        $this->assertEquals($result, 'function-name-new-name-another-name-with-special-chars-c-a-pital1-2-3-5saud-j-qureshi');
+        $this->assertEquals($result, 'function-name-new-name-another-name-with-special-chars-capital1-2-3-5saud-jqureshi');
     }
 
     public function testSnakeCase()
     {
-        $string1 = 'function-name+new_name.another%name#with$special(chars+CAPital1-2_3*5saudQureshi';
+        $string1 = 'function-name+new_name.another%name#with$special(chars+CAPital1-2_3*5saudJQureshi';
         $result  = str_snake_case($string1);
-        $this->assertEquals($result, 'function_name_new_name_another_name_with_special_chars_c_a_pital1_2_3_5saud_qureshi');
+        $this->assertEquals($result, 'function_name_new_name_another_name_with_special_chars_capital1_2_3_5saud_jqureshi');
     }
 
     public function testStripNumbers()

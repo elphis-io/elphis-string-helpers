@@ -54,28 +54,28 @@ class StringTest extends TestCase
 
     public function testStrAfter()
     {
-        $after    = str_after($this->string, 'I');
-        $expected = ' am creating an open source project';
+        $after = str_after($this->string, 'Corona p', true);
+        $expected = 'andemic I am creating an open source project';
         $this->assertEquals($after, $expected);
     }
 
     public function testStrBefore()
     {
-        $after    = str_before($this->string, 'I');
-        $expected = 'Amidst this corona pandemic ';
-        $this->assertEquals($after, $expected);
+        $before = str_before($this->string, 'thIs', true);
+        $expected = 'Amidst ';
+        $this->assertEquals($before, $expected);
     }
 
     public function testStrBetween()
     {
-        $after    = str_between($this->string, 'I', 'project');
-        $expected = ' am creating an open source ';
+        $after    = str_between($this->string, 'Amidst', 'project', true);
+        $expected = ' this corona pandemic I am creating an open source ';
         $this->assertEquals($after, $expected);
     }
 
     public function testCamelCase()
     {
-        $string1 = 'function-name+new_name.another%name#with$special(chars+CAPital+1+2)2(2)';
+        $string1 = 'function-name+new_name.another%name #with$special(chars+CAPital+1+2)2(2)';
         $result  = str_camel_case($string1);
         $this->assertEquals($result, 'functionNameNewNameAnotherNameWithSpecialCharsCapital1222');
     }

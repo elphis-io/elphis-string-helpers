@@ -86,7 +86,13 @@ function str_after(string $haystack, string $needle, bool $caseInsensitive = fal
         $position = stripos($haystack, $needle);
     }
 
-    return substr($haystack, $position + 1);
+    if ($position === false) {
+        return '';
+    }
+
+    $position += strlen($needle);
+
+    return substr($haystack, $position);
 }
 
 /**
@@ -145,9 +151,7 @@ function str_strip_special_chars(string $string, string $replaceWith = '')
 function str_camel_case(string $string)
 {
     $string = str_studly_case($string);
-    $string = lcfirst($string);
-
-    return str_replace(' ', '', $string);
+    return lcfirst($string);
 }
 
 function str_studly_case(string $string)

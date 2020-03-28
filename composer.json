@@ -1,6 +1,6 @@
 {
-    "name": "saudqureshi/php-helpers",
-    "description": "A set of helper functions to use with strings and arrays in PHP.",
+    "name": "elphis/string-helpers",
+    "description": "A set of helper functions to use with strings in PHP.",
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "^9.0"
@@ -14,7 +14,7 @@
     "authors": [
         {
             "name": "Saud Qureshi",
-            "email": "saud.qureshi@vamaship.com"
+            "email": "writedynamic@gmail.com"
         }
     ]
 }

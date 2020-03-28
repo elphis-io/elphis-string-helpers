@@ -1,0 +1,20 @@
+{
+    "name": "saudqureshi/php-helpers",
+    "description": "A set of helper functions to use with strings and arrays in PHP.",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "./src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Saud Qureshi",
+            "email": "saud.qureshi@vamaship.com"
+        }
+    ]
+}

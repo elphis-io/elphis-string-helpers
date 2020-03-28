@@ -1,6 +1,9 @@
 {
     "name": "elphis/string-helpers",
-    "description": "A set of helper functions to use with strings in PHP.",
+    "description": "Useful string helper functions for php.",
+    "keywords": [
+        "php", "helpers", "string", "contains", "starts_with", "ends_with", "useful", "str", "elphis", "laravel", "fluent"
+    ],
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "^9.0"

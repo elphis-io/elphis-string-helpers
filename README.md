@@ -3,6 +3,11 @@
 This library contains some basic php helpers that will make manipulating strings easier and better.
 Every function in this library is namespaced Elphis\Helpers\Str to avoid conflicts with any other library you might be using.
 
+### Installation
+```
+composer require elphis/string-helpers:dev-master
+```
+
 ### Below is the list of string helpers this package provides.
 
 * **str_contains($haystack, $needle, $caseInsensitive = false):**

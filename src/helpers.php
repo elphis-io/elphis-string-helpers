@@ -7,7 +7,7 @@ namespace Elphis\Helpers\Str;
  *
  * @param string $string1
  * @param string $string2
- * @param boolean $caseInsensitive
+ * @param bool $caseInsensitive
  * @return boolean
  */
 function str_equals(string $string1, string $string2,  bool $caseInsensitive = false)
@@ -20,7 +20,7 @@ function str_equals(string $string1, string $string2,  bool $caseInsensitive = f
  *
  * @param string $haystack
  * @param string $needle
- * @param boolean $caseInsensitive
+ * @param bool $caseInsensitive
  * @return boolean
  */
 function str_contains(string $haystack, string $needle, bool $caseInsensitive = false)
@@ -33,7 +33,7 @@ function str_contains(string $haystack, string $needle, bool $caseInsensitive = 
  *
  * @param string $haystack
  * @param string $needle
- * @param boolean $caseInsensitive
+ * @param bool $caseInsensitive
  * @return boolean
  */
 function str_starts_with(string $haystack, string $needle, bool $caseInsensitive = false)
@@ -46,7 +46,7 @@ function str_starts_with(string $haystack, string $needle, bool $caseInsensitive
  *
  * @param string $haystack
  * @param string $needle
- * @param boolean $caseInsensitive
+ * @param bool $caseInsensitive
  * @return boolean
  */
 function str_ends_with(string $haystack, string $needle, bool $caseInsensitive = false)
@@ -61,7 +61,7 @@ function str_ends_with(string $haystack, string $needle, bool $caseInsensitive =
  * limit the $string by $limit length and suffix it with the given $suffix
  *
  * @param string $string
- * @param integer $length
+ * @param int $length
  * @param string $suffix
  * @return string
  */
@@ -73,9 +73,9 @@ function str_limit(string $string, int $length, string $suffix = '...')
 /**
  * get the string after $needle from the $haystack
  *
- * @param [type] $haystack
- * @param [type] $needle
- * @param boolean $caseInsensitive
+ * @param string $haystack
+ * @param string $needle
+ * @param bool $caseInsensitive
  * @return string
  */
 function str_after(string $haystack, string $needle, bool $caseInsensitive = false)
@@ -100,7 +100,7 @@ function str_after(string $haystack, string $needle, bool $caseInsensitive = fal
  *
  * @param string $haystack
  * @param string $needle
- * @param boolean $caseInsensitive
+ * @param bool $caseInsensitive
  * @return string
  */
 function str_before(string $haystack, string $needle, bool $caseInsensitive = false)
@@ -120,8 +120,8 @@ function str_before(string $haystack, string $needle, bool $caseInsensitive = fa
  * @param string $haystack
  * @param string $from
  * @param string $to
- * @param boolean $caseInsensitive
- * @return void
+ * @param bool $caseInsensitive
+ * @return string
  */
 function str_between(string $haystack, string $from, string $to, bool $caseInsensitive = false)
 {
@@ -193,6 +193,7 @@ function str_snake_case(string $string)
  * strip the given string of the special chars and replace it with $replaceWith
  *
  * @param string $string
+ * @param string $replaceWith
  * @return string
  */
 function str_strip_numbers(string $string, string $replaceWith = '')
@@ -204,7 +205,7 @@ function str_strip_numbers(string $string, string $replaceWith = '')
  * create an array of string by breaking the given $string at $length
  *
  * @param string $string
- * @param integer $length
+ * @param int $length
  * @return array
  */
 function str_chunk(string $string, int $length = 100)

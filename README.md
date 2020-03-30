@@ -153,9 +153,9 @@ strips the given **$string** of any special character and spaces, and turns it i
 ```
     Eg:
     $title = 'This is a normal string';
-    str_kebab_case($title); // *this_is_a_normal_string*
+    str_snake_case($title); // *this_is_a_normal_string*
     $title = 'This is$a#normal%string';
-    str_kebab_case($title); // *this_is_a_normal_string*
+    str_snake_case($title); // *this_is_a_normal_string*
 ```
 
 * **str_strip_numbers($string):**
@@ -164,7 +164,7 @@ strips the given **$string** of any special character and spaces, and turns it i
 ```
     Eg:
     $title = 'great here is my contact no: 12346732';
-    str_kebab_case($title); // *great here is my contact no:*
+    str_strip_numbers($title); // *great here is my contact no:*
 ```
 
 * **str_chunks($string, $length = 100):**

@@ -1,6 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+
 use function Elphis\Helpers\Str\str_after;
 use function Elphis\Helpers\Str\str_chunk;
 use function Elphis\Helpers\Str\str_before;
@@ -10,6 +11,7 @@ use function Elphis\Helpers\Str\str_contains;
 use function Elphis\Helpers\Str\str_ends_with;
 use function Elphis\Helpers\Str\str_camel_case;
 use function Elphis\Helpers\Str\str_kebab_case;
+use function Elphis\Helpers\Str\str_limit;
 use function Elphis\Helpers\Str\str_snake_case;
 use function Elphis\Helpers\Str\str_starts_with;
 use function Elphis\Helpers\Str\str_studly_case;
@@ -121,5 +123,42 @@ class StringTest extends TestCase
         $chunks = str_chunk($this->string, 32);
         $length = ceil(strlen($this->string)/32);
         $this->assertCount($length, $chunks);
+    }
+    public function testStringChunkWithLatinChars()
+    {
+        $string = 'España bate su récord con 769 muertos por coronavirus en un día';
+        $chunks = str_chunk($string, 5);
+
+        $expected = [
+            "Españ",
+            "a bat",
+            "e su ",
+            "réco",
+            "rd co",
+            "n 769",
+            " muer",
+            "tos p",
+            "or co",
+            "ronav",
+            "irus ",
+            "en un",
+            " día",
+        ];
+
+        $this->assertEquals($expected, $chunks);
+    }
+
+    public function testStringLimit()
+    {
+        $limit = str_limit('abcd', 1);
+
+        $this->assertEquals('a...', $limit);
+    }
+
+    public function testStringLimitWithLatinChars()
+    {
+        $limit = str_limit('ñbcd', 1);
+
+        $this->assertEquals('ñ...', $limit);
     }
 }

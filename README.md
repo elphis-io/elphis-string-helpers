@@ -174,3 +174,8 @@ breaks the given **$string** at every **$length**, and returns an array of strin
     $title = 'hope ya'll like this small helper library';
     str_chunk($title, 10); // *['hope ya'll', ' like this', ' small hel', 'per librar', 'y']:*
 ```
+
+##Todo
+    ### Add multi byte support.
+    ### Add Wrapper classes around helper functions.
+    
